@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# Usage: ./setup_script.sh <GitHub Token>
+# Usage: ./setup_script.sh <GitHub Token> <Clone Directory>
 
 TOKEN="$1"
+REPO_URL="https://github.com/jacgit18/NoteScriptSyncer.git"
+CLONE_DIR="$2"
 CURRENT_USER=$(whoami)
 
 # Set up Git credentials
@@ -15,8 +17,11 @@ sudo sh -c "echo '$CURRENT_USER' >> /etc/cron.allow"
 # Restart cron service
 sudo systemctl restart cron
 
-# Search for sync.sh in the user's home directory and get the script's directory
-SYNC_SCRIPT_DIR=$(find ~ -name "sync.sh" -exec dirname {} \; | head -n 1)
+# Clone the Git repository into the specified directory
+git clone "$REPO_URL" "$CLONE_DIR"
+
+# Use the cloned directory for the SYNC_SCRIPT_DIR
+SYNC_SCRIPT_DIR="$CLONE_DIR"
 
 # Make the script executable (replace '#script' with your actual script filename)
 sudo chmod +x "$SYNC_SCRIPT_DIR/sync.sh"
