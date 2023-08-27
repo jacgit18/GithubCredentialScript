@@ -1,5 +1,9 @@
 # GithubCredentialScript
 
-sudo chmod u+x 
+```bash
+Make executable:
+sudo chmod u+x /script/location/credentialEnablement.sh
 
-./setup_script.sh <GitHub Token> <GitHub User> <Clone Directory>
+Run and pass params
+./credentialEnablement.sh <Paste GitHub Token> <GitHub User> <Clone Directory>
+```
