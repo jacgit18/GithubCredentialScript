@@ -4,7 +4,7 @@
 
 TOKEN="$1"
 GITHUB_USER="$2"
-REPO_URL="https://github.com/$GITHUB_USER/NoteScriptSyncer.git"
+REPO_URL="https://github.com/jacgit18/NoteScriptSyncer.git"
 CLONE_DIR="$3"
 CURRENT_USER=$(whoami)
 
