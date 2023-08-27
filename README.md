@@ -1,9 +1,11 @@
 # GithubCredentialScript
 
+## Make executable:
 ```bash
-Make executable:
 sudo chmod u+x /script/location/credentialEnablement.sh
+```
 
-Run and pass params
+## Run and pass params
+```bash
 ./credentialEnablement.sh <Paste GitHub Token> <GitHub User> <Clone Directory>
 ```
