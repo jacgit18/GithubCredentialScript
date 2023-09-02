@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Usage: ./setup_script.sh <GitHub Token> <GitHub User> <Clone Directory>
+# Usage: ./setup_script.sh <GitHub User> <GitHub Token> <Clone Directory>
 
-TOKEN="$1"
-GITHUB_USER="$2"
+GITHUB_USER="$1"
+TOKEN="$2"
 REPO_URL="https://github.com/jacgit18/NoteScriptSyncer.git"
 CLONE_DIR="$3"
 CURRENT_USER=$(whoami)
